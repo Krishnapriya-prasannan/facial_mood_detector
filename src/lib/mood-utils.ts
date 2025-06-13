@@ -1,21 +1,21 @@
 export const getMoodGradient = (mood: string) => {
   switch (mood) {
     case "happy":
-      return "from-yellow-400 via-orange-300 to-pink-400";
+      return "from-yellow-300 via-amber-400 to-orange-500";
     case "sad":
-      return "from-blue-500 via-indigo-400 to-purple-500";
+      return "from-sky-400 via-blue-500 to-indigo-600";
     case "angry":
-      return "from-red-500 via-orange-500 to-yellow-500";
+      return "from-red-500 via-rose-600 to-pink-700";
     case "surprised":
-      return "from-purple-500 via-pink-400 to-indigo-400";
+      return "from-fuchsia-500 via-purple-600 to-violet-700";
     case "fearful":
-      return "from-gray-600 via-slate-500 to-gray-700";
+      return "from-slate-500 via-gray-600 to-zinc-700";
     case "disgusted":
-      return "from-green-600 via-emerald-500 to-teal-500";
+      return "from-lime-400 via-green-500 to-emerald-600";
     case "neutral":
-      return "from-gray-400 via-slate-400 to-zinc-400";
+      return "from-slate-300 via-gray-400 to-zinc-500";
     default:
-      return "from-slate-100 via-gray-100 to-zinc-100";
+      return "from-slate-200 via-gray-200 to-zinc-200";
   }
 };
 
