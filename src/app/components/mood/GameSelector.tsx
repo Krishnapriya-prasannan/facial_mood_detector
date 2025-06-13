@@ -28,15 +28,15 @@ const GameSelector: React.FC<GameSelectorProps> = ({ mood }) => {
 
   // Map mood to game names (for display)
   const gameByMood: Record<string, string> = {
-    happy: "Mood Match Game 🎉",
-    neutral: "Reaction Timer ⚡",
-    sad: "Gratitude Flip 💖",
-    angry: "Bubble Pop 🔴",
-    fearful: "Breathe With Me 🫁",
-    surprised: "Quick Quiz 🤯",
+    happy: "Mood Match Game ",
+    neutral: "Reaction Timer ",
+    sad: "Gratitude Flip ",
+    angry: "Bubble Pop ",
+    fearful: "Breathe With Me ",
+    surprised: "Quick Quiz ",
   };
 
-  const currentGameName = gameByMood[mood] || "Try a Mindful Moment 🧘";
+  const currentGameName = gameByMood[mood] || "Try a Mindful Moment ";
   const CurrentGameComponent = gameComponents[mood] || <MindfulMoment />;
 
   return (
