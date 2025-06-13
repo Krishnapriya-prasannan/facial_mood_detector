@@ -5,7 +5,7 @@ import { MoodHistory } from "@/lib/mood-utils";
 import faceapi from "@/lib/face-api-mock";
 import VideoPanel from "./mood/VideoPanel";
 import StatisticsPanel from "./mood/StatisticsPanel";
-
+import MoodChart from "./mood/MoodChart";
 const VideoFeed: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentMood, setCurrentMood] = useState<string>("neutral");
@@ -136,6 +136,7 @@ const VideoFeed: React.FC = () => {
             sessionStartTime={sessionStartTime}
             currentMood={currentMood}
           />
+    <MoodChart moodHistory={moodHistory} />
         </div>
       </main>
       
