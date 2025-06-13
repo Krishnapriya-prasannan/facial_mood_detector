@@ -41,7 +41,7 @@ const MoodMatchGame: React.FC = () => {
       }
       setMoves((m) => m + 1);
     }
-  }, [flippedIndices]);
+  }, [flippedIndices,cards]);
 
   useEffect(() => {
     if (cards.every((card) => card.matched)) {

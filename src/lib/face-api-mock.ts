@@ -1,14 +1,20 @@
-// Mock face-api.js for demonstration (replace with actual import)
 const faceapi = {
   nets: {
     tinyFaceDetector: {
-      loadFromUri: async (MODEL_URL: string) => {},
-      params: true
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      loadFromUri: async (_modelUrl?: string) => {
+        return new Promise<void>((resolve) => setTimeout(resolve, 100));
+      },
+      params: true,
     },
     faceExpressionNet: {
-      loadFromUri: async (MODEL_URL: string) => {}
-    }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      loadFromUri: async (_modelUrl?: string) => {
+        return new Promise<void>((resolve) => setTimeout(resolve, 100));
+      },
+    },
   },
+
   detectSingleFace: () => ({
     withFaceExpressions: async () => ({
       expressions: {
@@ -18,11 +24,12 @@ const faceapi = {
         surprised: Math.random(),
         fearful: Math.random(),
         disgusted: Math.random(),
-        neutral: Math.random()
-      }
-    })
+        neutral: Math.random(),
+      },
+    }),
   }),
-  TinyFaceDetectorOptions: class {}
+
+  TinyFaceDetectorOptions: class {},
 };
 
 export default faceapi;

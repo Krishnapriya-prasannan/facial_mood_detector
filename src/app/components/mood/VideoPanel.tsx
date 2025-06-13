@@ -79,7 +79,7 @@ const VideoPanel: React.FC<VideoPanelProps> = ({
               <h3 className={`text-2xl sm:text-3xl font-bold ${currentMoodData.color} capitalize`}>
                 {currentMood}
               </h3>
-              <p className="text-slate-400 italic">"{moodQuotes[currentMood as keyof typeof moodQuotes]}"</p>
+<p className="text-slate-400 italic">&quot;{moodQuotes[currentMood as keyof typeof moodQuotes]}&quot;</p>
               {detectionCount > 0 && !isDetecting && (
                 <div className="mt-2 flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>

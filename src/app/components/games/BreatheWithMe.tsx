@@ -30,11 +30,15 @@ const BreatheWithMe: React.FC = () => {
     next();
     return () => clearTimeout(timeout);
   }, []);
+const isInhale = phase === "inhale";
 
-  useEffect(() => {
+useEffect(() => {
+  if (isInhale) {
     setCount((prev) => prev + 1);
-  }, [phase === "inhale"]);
+  }
+}, [isInhale]);
 
+  
   return (
     <div className="bg-slate-800 border border-blue-500 rounded-2xl p-6 h-80 flex flex-col items-center justify-center text-slate-200">
       <p className="mb-2 text-sm text-center text-slate-400">A guided calming exercise</p>
