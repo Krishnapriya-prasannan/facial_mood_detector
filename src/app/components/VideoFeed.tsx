@@ -7,6 +7,7 @@ import VideoPanel from "./mood/VideoPanel";
 import StatisticsPanel from "./mood/StatisticsPanel";
 import MoodChart from "./mood/MoodChart";
 import MoodInsights from "./mood/MoodInsights";
+import GameSelector from "./mood/GameSelector";
 const VideoFeed: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentMood, setCurrentMood] = useState<string>("neutral");
@@ -139,6 +140,8 @@ const VideoFeed: React.FC = () => {
           />
           <MoodChart moodHistory={moodHistory} />
           <MoodInsights moodHistory={moodHistory} />
+          <GameSelector mood={currentMood} />
+
         </div>
       </main>
       
