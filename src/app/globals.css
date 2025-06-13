@@ -129,3 +129,24 @@ body {
 .animate-slide-in {
   animation: slide-in-from-bottom 0.5s ease-out forwards;
 }
+
+/* Hide native cursor everywhere */
+* {
+  cursor: none !important;
+}
+
+/* Outer cursor with subtle glow and trailing */
+.cursor-outer {
+  will-change: transform;
+  box-shadow: 0 0 12px 3px rgba(139, 92, 246, 0.6);
+  backdrop-filter: blur(6px);
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+}
+
+/* Inner cursor - sharp, solid dot */
+.cursor-inner {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
