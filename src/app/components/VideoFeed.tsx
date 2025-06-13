@@ -138,9 +138,11 @@ const VideoFeed: React.FC = () => {
             sessionStartTime={sessionStartTime}
             currentMood={currentMood}
           />
+
           <MoodChart moodHistory={moodHistory} />
-          <MoodInsights moodHistory={moodHistory} />
           <GameSelector mood={currentMood} />
+          <MoodInsights moodHistory={moodHistory} />
+
 
         </div>
       </main>

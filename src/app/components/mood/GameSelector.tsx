@@ -40,7 +40,7 @@ const GameSelector: React.FC<GameSelectorProps> = ({ mood }) => {
   const CurrentGameComponent = gameComponents[mood] || <MindfulMoment />;
 
   return (
-    <div className="bg-slate-700 p-4 mt-4 rounded-xl text-slate-200 shadow-lg max-w-md mx-auto">
+    <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-slate-700">
       <h4 className="text-md font-semibold mb-2">🎮 Personalized Game</h4>
       <p className="text-slate-300 mb-2">Based on your mood, try:</p>
       <div className="text-indigo-300 text-lg font-bold mb-4">{currentGameName}</div>
